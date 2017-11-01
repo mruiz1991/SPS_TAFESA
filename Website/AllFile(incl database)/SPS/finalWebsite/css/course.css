@@ -1,0 +1,1572 @@
+﻿/*  
+    TAFE SA Corporate website - Responsive
+    Date: 20-10-2016
+    Author: Nuwan Perera
+    Version: 1.0
+*/
+.print_only {
+        display: none;
+}
+/* Fix the page anchor navigate to the wrong link issue */
+a.scrollAnchor {
+  display: block;
+  height: 194px; /*same height as header*/
+  margin-top: -194px; /*same height as header*/
+  visibility: hidden;
+}
+
+/*
+.sfContentBlock ul li a:hover {
+    text-decoration: underline !important;
+    color: #f90218 !important;
+}*/
+ul#ciyear-nav, ul#course-type {
+    list-style-type: none;
+}
+#ciyear-nav, #course-type {
+    background-color: #FFFFFF;
+    list-style: none;
+}
+
+ul#ciyear-nav {
+    height: 47px;
+    border-bottom:1px solid #e9e9e9;
+}
+ul#course-type {
+    height: 47px;
+    border-bottom:1px solid #e9e9e9;
+}
+
+ul#course-type li {
+    float: left;
+    padding: 6px 0 0px 0 !important;
+    font-size: 1em;
+}
+ul#ciyear-nav li {
+    float: left;
+    padding: 6px 0 0px 0 !important;
+    font-size: 1em;
+}
+
+.mainContent ul#ciyear-nav {
+    padding: 2px 0 0px 0 !important;
+}
+.mainContent ul#course-type {
+    padding: 2px 0 0px 0 !important;
+}
+
+ul#ciyear-nav li a {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px 5px 20px;
+    height: 39px;
+    text-decoration: none;
+    outline: none;
+    background: #f9f9f9;
+    color: #666 !important;
+    /*border-top: 2px solid #f5f5f5;*/
+    border-bottom: 1px solid #e9e9e9;
+}
+ul#course-type li a {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px 5px 20px;
+    height: 39px;
+    text-decoration: none;
+    outline: none;
+    background: #f9f9f9;
+    color: #666 !important;
+    /*border-top: 2px solid #f5f5f5;*/
+    border-bottom: 1px solid #e9e9e9;
+}
+
+ul#ciyear-nav li a:hover, ul#course-type li a:hover {
+    background-color: #f5f5f5;
+    color: #ba1322 !important;
+}
+
+ul#ciyear-nav li a.active {
+    background-color: White;
+    color: #ba1322 !important;
+    border-top: 2px solid #be1428;
+    border-left: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+    border-bottom: 1px solid #ffffff;
+}
+ul#course-type li a.active {
+    background-color: White;
+    color: #ba1322 !important;
+    border-top: 2px solid #be1428;
+    border-left: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+    border-bottom: 1px solid #ffffff;
+}
+
+/**
+*  XSLT Additional Styles
+*/
+
+.course_table_box {
+    padding: 0 0 3px 0;
+    /*margin-bottom: 30px;*/
+    background: #FEFEFE;
+    /*border: 1px solid #c5c5c5;*/
+    position: relative;
+}
+.course_table_box .content {
+    /*margin: 0 15px;*/
+}
+.course_table_box h2 {
+    color: #666;
+    padding: 15px 0px 15px 0 !important;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+.course_table_box h2 a, .course_table_box h2 a:link{
+    font-size: 22px;
+}
+.course_table_box h3 {
+    padding: 10px 0;
+}
+.campus_delivery_locations {
+    font-size: 18px;
+    padding: 1px 0 0 10px !important;
+    margin: 14px 0 !important;
+}
+.course_table_box .no_wrap {
+    white-space: nowrap;
+}
+.compress {
+    letter-spacing: -1pt;
+}
+.course_table_box .apply_now,
+.course_table_box .apply_now a {
+    width: 118px;
+    height: 31px;
+}
+.course_table_box .apply_now {
+    position: absolute;
+    right: 20px;
+    margin-top: -41px;
+}
+.course_table_box .apply_now a {
+    display: block;
+    text-indent: -999em;
+}
+/**********************************/
+
+.course_table_box .help a {
+    margin-left: 1em;
+    margin-top: 0.7em;
+}
+.course_table_box .help.ie a {
+    margin-top: 0em !important;
+}
+
+.application-column .apply-now,
+.application-column .check-status {
+    /*height: 18px;
+  display: block;
+  overflow: hidden;
+  text-indent: -9999em;*/
+}
+.application-column .apply-now {
+    width: 72px;
+}
+.application-column .check-status {
+    width: 72px;
+}
+.application-column .apply-now.direct {
+    width: 102px !important;
+    background-repeat: no-repeat;
+}
+.application-column.year-2013 .apply-now {
+    width: 85px;
+}
+.application-column.year-2014 .apply-now {
+    width: 85px;
+}
+.application-column.year-2013 .check-status,
+.application-column.year-2014 .check-status {
+    width: 85px;
+}
+/* Course locations */
+
+table.course_locations {
+    border: 1px solid #f5f5f5;
+}
+.course_locations th {
+    background: #f5f5f5;
+    padding: 20px 15px;
+    font-size: 17px;
+    font-weight: normal;
+    color: #787878;
+    border-bottom: 0;
+}
+@media (max-width:768px){
+    .course_locations th{
+        font-size:15px;
+       word-break: break-all;
+    }
+    .course_locations .studyload .ft_pt{
+        font-size:12px !important;
+    }
+}
+@media (min-width:768px) and (max-width:992px){
+    .course_locations th{
+        font-size:15px;
+    }
+    .course_locations .studyload .ft_pt{
+        font-size:13px !important;
+    }
+}
+.course_locations td {
+    font-size: 1em;
+    padding: 10px 15px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #E5E5E5;
+}
+table.course_locations.notes {
+    font-weight: 600;
+    border-top: 0;
+}
+.course_locations td a {
+    padding:0 2px;
+}
+@media (min-width:992px){
+    .course_locations td a {
+        white-space: nowrap;
+    }
+}
+table.course_locations tr.info-session {
+    border-top: 0;
+    font-size:13px;
+    /*border-top:5px solid #f5f5f5;*/
+}
+.course_locations.notes td {
+    /*border-top: 0px solid #E5E5E5;*/
+}
+.course_locations.notes td.symbol {
+    border-top: 0;
+}
+.course_locations.notes td.notetext {
+    border-top: 0;
+}
+tr.info-session td {
+    border-top-style: none;
+}
+.course_locations .application-column a, .short-course-detail-table .enquire a{
+    color: #fff !important;
+    padding: 7px 10px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    text-decoration: none;
+    background-color: #5cb85c !important;
+    border-color: #4cae4c !important;
+    white-space: nowrap;
+    font-size: 16px;
+}
+.course_locations .application-column a:hover,  .short-course-detail-table .enquire a:hover {
+    color: #fff !important;
+    background-color: #449d44 !important;
+    border-color: #398439 !important;
+}
+.course_locations {
+    width: 100%;
+}
+.course_locations .campus {
+    /*padding: 0 15px;*/
+}
+.course_locations .sataccode {
+    /*width: 67px;*/
+}
+.course_locations .application {
+    /*width: 112px;*/
+}
+.course_locations .studymode {
+    /*width: 133px;*/
+}
+.course_locations .studyload {
+    /*width: 99px;*/
+
+}
+.course_locations .scheduled {
+    /*width: 97px;*/
+}
+.course_locations .notetext {} .course_locations table td {
+    border-top: 0;
+}
+.course_locations td a {
+    /*padding: 0 15px;*/
+}
+.course_locations .studyload .ft_pt{
+        font-size:14px;
+}
+/***************************************/
+
+.course_locations td.start-date-end-date,
+.course_locations th.start-date-end-date {
+    text-align: center;
+}
+table.course_locations.short-courses td.first,
+table.course_locations.short-courses th.first {
+    padding-left: 18px;
+}
+table.course_locations.short-courses .sc-notes-table {
+    margin-left: 18px;
+    width: 95%;
+}
+table.course_locations.short-courses .sc-notes-table .label {
+    font-weight: bold;
+    width: 140px;
+    text-align: right;
+    padding-right: 8px;
+}
+table.course_locations.short-courses .notes {
+    color: #555;
+}
+table.course_locations.short-courses td {
+    border: 0;
+    /*border-top: 1px solid #E5E5E5;*/
+}
+table.course_locations.short-courses .notes td {
+    border: 0;
+    font-size: 11px;
+}
+table.course_locations.short-courses .first td{
+
+}
+table.course_locations .notetext, table.course_locations .symbol{
+    font-weight: normal;
+    font-size:13px;
+    line-height: 20px;
+}
+/* Colour highlighting overrides */
+
+.competitive_applications .help a {
+    /*background-image: url("Standard_images/help_icon_competitive.gif?d=1");*/
+    
+    width: 12px;
+    height: 12px;
+}
+.course_table_box.international h2 a {
+    font-size: 22px;
+    padding: 20px;
+}
+.immediate_applications h2 a,
+.competitive_applications h2 a,
+.course_table_box.international h2 a {
+    text-decoration: none;
+    padding: 0 0 0 15px;
+}
+.immediate_applications h2 a:hover,
+.competitive_applications h2 a:hover,
+.course_table_box.international h2 a:hover {
+    text-decoration: underline;
+}
+.immediate_applications h3,
+.immediate_applications h2 {
+    color: #6d6d6d;
+}
+.immediate_applications h2 a {
+    font-size: 22px;
+}
+.immediate_applications .content h3{
+    padding: 30px 0 10px 0;
+}
+.content .info p.note{
+    padding: 15px 0 0 0;
+}
+.immediate_applications .help a,
+.course_table_box.international .help a {
+    font-size: initial;
+    font-weight: normal;
+}
+.course_table_box.international .help a {
+ 
+}
+.competitive_applications h3,
+.competitive_applications h2,
+.competitive_applications h2 a {
+    color: #858585;
+}
+.immediate_applications .apply_now {
+    
+}
+.course_table_box.international {
+    /*border: 1px solid #f5f5f5;*/
+}
+.course_table_box.international h2,
+.course_table_box.international h3 {
+    /*color: #ba1322;*/
+}
+.course_table_box.international h2 a {
+    color: #ba1322;
+}
+div.immediate_applications {
+    border: 0;/* border: 1px solid #f5f5f5;*/
+}
+div.competitive_applications {
+    /*padding:20px;*/
+    
+    /*border: 1px solid #f9f9f9;*/
+}
+/*course_summary */
+
+.course_summary {
+    position: relative;
+    margin: 0 0 50px 0;
+    
+    /*border-top: solid 1px #e9e9e9;*/
+    /* padding: 20px 10px 20px 15px; */
+}
+.course_summary th {
+    white-space: nowrap;
+}
+@media (max-width:768px){
+    .course_summary th, .course_table_box .no_wrap{
+        white-space:normal;
+        word-wrap: break-word;
+        font-size:15px;
+        padding:5px 5px 5px 2px;
+    }
+    .course_locations td a, .mainContent table td{
+        padding:8px 8px;
+    }
+}
+.course_summary tr.fee-free th,
+.course_summary tr.fee-free-for-jobseekers th {
+    display: none;
+}
+.course_summary tr.fee-free td,
+.course_summary tr.fee-free-for-jobseekers td {
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    text-indent: -9999em;
+    margin: 0;
+    padding: 0;
+}
+.course_summary tr.fee-free a,
+.course_summary tr.fee-free-for-jobseekers a {
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    text-indent: -9999em;
+    margin: 0;
+    padding: 0;
+}
+.course_summary tr.fee-free-for-jobseekers a {
+    width: 123px;
+    height: 123px;
+}
+.courses_title {
+    font-size: 1.8em;
+    /*margin: 7px 0px 14px 15px;*/
+}
+.course_type_title {
+    font-size: 1.5em;
+    padding: 20px 0 0 0;
+}
+h2.delivery_locations_title {
+    padding: 40px 15px 15px 15px !important;
+    text-align: left;
+    /*border-top: 1px solid #f5f5f5;*/
+    /*border-right: 1px solid #f5f5f5;
+    border-left: 1px solid #f5f5f5;*/
+}
+.thgrid {
+    background-color: #fafafa;
+    color: #777777;
+    font-size: 1.1em;
+    text-align: right;
+    width: 25%;
+    padding: 0 15px;
+    font-weight: normal;
+    border-right:3px solid #e9e9e9;
+}
+.thgrid_name {
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #E4E3E3;
+    color: #777777;
+    font-size: 0.8em;
+    padding: 5px 10px 5px 5px;
+    text-align: left;
+}
+.thgrid_code {
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #E4E3E3;
+    color: #888888;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px;
+    text-align: right;
+}
+.thgrid_universityprogram {
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #E4E3E3;
+    color: #888888;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px;
+    text-align: left;
+    width: 370px;
+}
+.tdgrid {
+    font-size: 0.9em;
+    margin: 0;
+    padding: 7px 3px 7px 10px;
+    text-align: left;
+    vertical-align: top;
+}
+.tdgrid p {
+    margin-top: 0;
+    padding-top: 0;
+}
+.tdgrid_code {
+    color: #888888;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 7px 4px 7px 10px;
+    text-align: right;
+    vertical-align: top;
+}
+.tdgrid_universityprogram {
+    color: #888888;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 7px 4px 7px 10px;
+    text-align: left;
+    vertical-align: top;
+    width: 370px;
+}
+.course_table_box .help a,
+.thgrid_name .help a,
+.thgrid_course_type .help a {
+    text-indent: -999em;
+    display: inline-block;
+    /*position: absolute;*/
+    width: 16px;
+    height: auto;
+    margin-left: 20px;
+    cursor: pointer;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-image: url('/SiteFinity/WebsiteTemplates/TAFESABootstrap/App_Themes/TAFESA/images/help.gif');
+}
+/*.thgrid_course_type .help a {
+   text-indent: -999em; 
+}
+.thgrid_course_type span.help{
+    position: relative;
+   cursor: pointer;
+}
+.thgrid_course_type .help:before{
+    content: "\f059";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #ba1322;
+    font-size: 18px;
+    padding-left: 0.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+   cursor: pointer;
+}*/
+
+.course_display .thgrid_course_type,
+.course_display .thgrid_code {
+    background: #f5f5f5;
+    padding: 20px 15px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #787878;
+    border-bottom: 0;
+}
+.study_area_course_list table.course_display {
+    width: 100%;
+    border: 1px solid #f2f2f2;
+    margin: 40px 0;
+}
+ 
+.course_table_box .help a {
+    /*margin-left: 1em;
+    margin-top: 0.7em;*/
+}
+.course_table_box .help.ie a {
+    margin-top: 0em !important;
+}
+.course_display {
+    margin: 8px 0px 17px 0px;
+}
+.inc_quals td {
+    font-size: 1.2em;
+    padding: 20px 0;
+}
+.ft_pt {
+    color: #777;
+    font-size: .9em;
+    font-weight: lighter;
+}
+.inc_quals ul,
+.inc_quals li {
+    margin-top: 0;
+    padding-top: 0;
+}
+.note {
+    color: #777777;
+    font-size:13px;
+    line-height: 19px;
+}
+.notes {
+    /*margin-top: 1em;*/
+    color: #777777;
+}
+
+/* Custom style to overide the existing styles */
+
+#skills_for_all_eligibilty {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 35px;
+    margin-bottom: 25px;
+}
+.course_general #skills_for_all_eligibilty{
+    border:0 !important;
+}
+.skills_for_all_yes{
+    color:#6d6d6d;
+}
+
+#course_cost_table {
+    width: 100% !important;
+}
+.course-section {
+    padding: 40px 0;
+}
+.course_general ul li {
+    /*padding:5px 20px;*/
+}
+.course_general h3{
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    padding: 20px 0 0 0;
+    color: #6d6d6d;
+}
+.brochure-notes h2 {
+    /*padding:10px 0;*/
+}
+
+.contact-details h2 {
+    padding: 10px 0;
+}
+.contactInfo label{
+    font-size:17px !important;
+}
+.contact-details ul.contactInfo{
+    list-style-type: none;
+}
+ul.contactInfo li{
+    font-size:25px;
+    color: #9d9d9d;
+    line-height:40px;
+    float:left;
+    margin-right: 40px;
+} 
+ul.contactInfo li a{
+    font-size:24px;
+} 
+ul.contactInfo li i{
+    padding-right:20px;
+}
+
+.how-to-apply .contactInfo a{
+    font-size:24px;
+    padding-right:15px;
+}
+.how-to-apply .contactInfo a.online-application{
+    margin-left: 15px;
+}
+.how-to-apply .contactInfo i{
+    font-size:24px;
+    padding:0 15px;
+    color: #9d9d9d;
+}
+@media (max-width:768px){
+    ul.contactInfo li{
+        font-size:16px;
+        float: none;
+        line-height:30px;
+    }
+    ul.contactInfo li a{
+        font-size:16px;
+    }    
+}
+/* Course fee */
+
+.course_fees .international-fees {
+    width: 100%;
+    border: 5px solid #f5f5f5;
+    margin-bottom: 40px;
+    margin-left: 0 !important;
+    float: none !important;
+}
+.course_fees .international-fees tr:first-child {
+    background-color: #f5f5f5;
+}
+.course_fees .international-fees td,
+.course_fees .international-fees th {
+    padding: 20px !important;
+    font-size: 20px;
+    color: #9b9b9b;
+    font-weight: normal;
+}
+.course_fees .international-fees td.value {
+    color: #8b8b8b;
+}
+/* Credit tranfer search result */
+.credit-transfer-search-results table {
+    width: 100%;
+    border: 1px solid #f2f2f2;
+    /*margin: 30px 0;*/
+    /*background-color: #f5f5f5;*/
+}
+.credit-transfer-search-results table th {
+    background-color: #f5f5f5;
+    padding: 20px 15px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #787878;
+    border-bottom: 0;
+}
+.credit_transfer_box_header h3.credit_transfer_title{
+    padding:30px 0 25px 0;
+}
+.credit-transfer-search-results span.course-name,
+.credit-transfer-search-results span.course-name-inactive{
+    font-weight:700;
+    font-size: 18px;
+    color: #6d6d6d;
+    padding-right:10px;
+}
+.credit-transfer-search-results span a{
+    font-weight:700;
+    font-size: 18px;
+    padding-right:10px;
+}
+.credit-transfer-search-results span.course-name-inactive{
+    cursor:help;
+}
+
+/* table inc_quals */
+
+table.inc_quals ul {
+    list-style-type: none;
+}
+
+/* Course page styles from course web*/
+
+.even {
+    background-color: #FCFCFC;
+}
+.study-group {
+    border: solid 1px #ccc;
+}
+.cg-toggle {
+    padding: 12px 0 9px 20px; /*padding: 17px 0 16px 20px;*/
+    float: right;
+    width: 10%;
+    background-color: #ececec;
+    border-bottom: 3px solid #fcfcfc;
+}
+.cg-toggle img {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    left: 30px;
+}
+@media (max-width:992px){
+    .cg-toggle img {
+        left: 10px;
+    }
+}
+@media (max-width:768px){
+    .cg-toggle img {
+        left: 0;
+    }
+}
+.cg-link {
+    color: #777;
+    /*float: left;*/
+    width: 90%;
+    padding: 15px 0 15px 20px;
+    background-color: #ececec;
+    border-bottom: 3px solid #fcfcfc;
+}
+.cg-link h3 {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.cg-link img,
+h2 img {
+    margin-bottom: 10px;
+    padding: 0;
+}
+.cg-link a {
+    text-decoration: none;
+    font-size: 18px;
+}
+.cg-link a.expando {
+    font-size: 0.9em;
+    color: #999999;
+}
+.cg-link a:hover {
+    text-decoration: underline;
+}
+.info {
+    margin: 0;
+    padding: 15px 0 5px 0;
+}
+.info .info{
+    padding:0 15px;
+}
+
+.info table.course_display, .info .info table{
+    margin: 1px 0px 20px 0px;
+    width:100%;
+}
+.info th.thgrid_course_type{
+    background: #f8f8f8;
+    padding: 5px 30px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #787878;
+    border-bottom: 0;
+}
+.info th.thgrid_code{
+    /*padding: 5px 30px;*/
+    font-size: 16px;
+}
+.info table.course_display .tdgrid{
+    padding-left:30px;
+}
+.info table{
+    margin-bottom:20px;
+    border-top: solid 3px #e9e9e9;
+}
+.info br{
+    display: none;
+}
+.info table .tdgrid br{
+    display: block;
+}
+
+/* Regional Search option */
+/*.regional_search_options{
+    padding: 20px;
+    border: 5px solid #f2f2f2;
+    padding: 20px; 
+    border: 3px solid #f1f1f1; 
+    background-color: #f9f9f9; 
+}*/
+/*.regional_search_options .industry_group select{
+    background: #fefefe !important;
+    border: 1px solid #f5f5f5 !important;
+    height: 40px;
+    padding: 0 15px;
+    margin:0 20px;
+    color: #999999;
+    font-weight: normal;
+}
+.regional_search_options .industry_group label{
+    padding:0 15px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.regional_search_options .industry_group .go_button{
+    background: #888 !important;
+    border: 1px solid #aeaeae !important;
+    color: #fff !important;
+    height: 40px;
+    padding:0 15px;
+}
+.regional_search_options .industry_group .go_button:hover{
+  background: #be1428 !important;
+}*/ 
+
+/*  Uni credit tranfer options search */
+.credit_transfer_options, .regional_search_options{
+    /*border: 5px solid #f2f2f2;*/
+    padding: 20px 20px 0 20px; 
+    border: 3px solid #f1f1f1; 
+    background-color: #f9f9f9; 
+}
+
+.credit_transfer_options .industry_group select, .regional_search_options .industry_group select{
+    height: 40px;
+    width: 30%;
+    border: 1px solid #d5d5d5 !important;
+    font-size: 15px !important;
+    padding: 0 10px !important;
+    float: left;
+    margin: 0 0 20px 10px;
+}
+.credit_transfer_options .industry_group label, .regional_search_options .industry_group label{
+    width: 10%;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 8px 0 5px 20px;
+    float: left;
+}
+.credit_transfer_options .industry_group input.go_button, .regional_search_options .industry_group input.go_button{
+    /*width: 100px;*/
+    background: #888 !important;
+    border: 1px solid #aeaeae !important;
+    color: #fff !important;
+    height: 38px;
+    padding: 0 25px;
+    margin-left:10px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+.credit_transfer_options .industry_group input.go_button:hover, .regional_search_options .industry_group input.go_button:hover {
+  background: #be1428 !important;
+}
+@media (max-width:540px){
+    .credit_transfer_options .industry_group select, .regional_search_options .industry_group select,
+    .credit_transfer_options .industry_group label, .regional_search_options .industry_group label
+     {
+        width: 90%;
+    }
+    .credit_transfer_options .industry_group input.go_button,
+    .regional_search_options .industry_group input.go_button{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+} 
+@media (max-width:992px) and (min-width:540px){
+    .credit_transfer_options .industry_group label,
+    .regional_search_options .industry_group label
+    {
+       width:100%;
+    }
+    .credit_transfer_options .industry_group select,
+    .regional_search_options .industry_group select{
+        width:75%;
+       float:none;
+    }
+}  
+/* Short course delivery locations */
+table.course_locations.short-courses .notes .short-course-detail-table td{
+    font-size: 15px;
+}
+table.course_locations.short-courses .notes table{
+    width: 100%;
+}
+table.course_locations.short-courses .notes tr{
+
+}
+table.course_locations.short-courses .notes table td{
+    margin: 5px 10px;
+    display: inline-block;
+}
+table.course_locations.short-courses .notes table td.class-times{
+    width: 20%;
+}
+
+/* Visited link only for courses */
+.course_display a:visited{
+    color: #ba1322;
+}
+.course_display a:hover{
+    text-decoration:underline;
+}
+
+/* Hair & Beauty for schools styles */
+.mainContent #hbform fieldset, .mainContent #MainContent_C011 fieldset {
+    background-color: #f8f8f8;
+    border: 0;
+}
+.mainContent #hbform input[type='radio'], .mainContent #MainContent_C011 input[type='radio'] {
+    border:1px solid #f5f5f5;
+    height: 40px;
+    width: 20px;
+    float: left;
+    display: block;
+    margin-right: 10px;
+    outline: none;
+}
+.mainContent #hbform input, .mainContent #MainContent_C011 input[type=text] {
+    border:1px solid #f5f5f5;
+    height: 40px;
+    width: 100%;
+}
+.mainContent #hbform label {
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    color: #9a9a9a;
+    width:100%;
+    text-align: left;
+}
+.mainContent #hbform fieldset legend, .mainContent #MainContent_C011 fieldset legend {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 50px 0 0px 15px !important;
+    color: #6d6d6d;
+    border:0;
+}
+.mainContent #hbform select, .mainContent #MainContent_C011 select {
+    background: #fefefe;
+    border: 1px solid #f5f5f5;
+    height: 40px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    width:60%;
+}
+.mainContent #hbform textarea, .mainContent .sfFormsEditor textarea, .mainContent #MainContent_C011 textarea {
+    background: #fefefe;
+    border: 1px solid #d5d5d5;
+    color: black;
+    width:60%;
+    font-size: 15px;
+}
+.mainContent #hbform input.submit, .mainContent #MainContent_C011 input.submit{
+    width: 100px;
+    background: #888;
+    border: 1px solid #aeaeae !important;
+    color: #fff !important;
+    height: 40px;
+    right: 25px;
+    position: relative;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+.mainContent #hbform input.submit:hover, .mainContent #MainContent_C011 input.submit:hover{
+    background: #ba1322;
+}
+.mainContent #hbform table.rbl, .mainContent #MainContent_C011 table.rbl{
+    width: 100%;
+}
+.mainContent #hbform table label, .mainContent #MainContent_C011 table label{
+    width: auto !important;
+    margin-top: 12px;
+}
+.mainContent .sfContentBlock table, .mainContent .MainContent_C011 table{
+    background: #fefefe;
+    border: 1px solid #f5f5f5;
+    width:100% !important;
+}
+.mainContent .sfContentBlock table td, .mainContent .MainContent_C011 table td{
+    border:0;
+    padding: 15px;
+}
+.mainContent #hbform fieldset fieldset ol, .mainContent #MainContent_C011 fieldset fieldset ol{
+    margin: 0 0 0 40px;
+}
+@media (max-width:768px){
+    .mainContent #hbform input, .mainContent #hbform select, .mainContent #hbform textarea,
+    .mainContent #MainContent_C011 input[type="text"], .mainContent #MainContent_C011 select, .mainContent #MainContent_C011 textarea {
+        width:100%;
+    }
+    .mainContent #hbform label, .mainContent #MainContent_C011 label {
+        width:100%;
+        text-align: left;
+    }
+    .mainContent #hbform fieldset li, .mainContent #MainContent_C011 fieldset li {
+        padding-bottom:0;
+    }
+}
+/* Onshore Petroleum Centre styles */
+.sfFormsEditor {
+    background: #f8f8f8;
+}
+.sfTxt {
+    border:1px solid #f5f5f5;
+    height: 40px;
+    width: 100% !important;
+}
+.sfTxtLbl {
+    display: block;
+    font-size: 18px;
+    font-weight: normal !important;
+    color: #9a9a9a;
+    width:100%;
+    text-align: left;
+}
+.sfFormInstructions {
+    display: block;
+    font-size: 18px;
+    font-weight: normal !important;
+    color: #9a9a9a;
+    width:100%;
+    text-align: left;
+}
+.sfTxt textarea {
+    background: #fefefe;
+    border: 1px solid #d5d5d5;
+    color: black;
+    width: 80%;
+    font-size: 15px;
+}
+.sfSuccess {
+    display: block !important;
+    font-size: 18px !important;
+    font-weight: normal !important;
+    color: #ba1322 !important;
+    width:100% !important;
+    text-align: left !important;
+    margin-bottom: 50px !important;
+}
+.sfFormSubmit input {
+    width: 100px;
+    background: #888;
+    border: 1px solid #aeaeae !important;
+    color: #fff !important;
+    height: 40px;
+    font-size: 18px !important;
+    position: relative;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+.sfFormSubmit input:hover{
+    background: #ba1322;
+}
+
+/* Apply & Enrol form */
+.mainContent .sfFormsEditor {
+    padding: 20px 30px;
+    background: #f8f8f8;
+}
+.mainContent .sfFormsEditor .sfFormBox label, .mainContent .sfFormsEditor .sfFormDropdown label, .mainContent .sfFormBlock, .mainContent .sfFormsEditor .sfFormCheckboxlist {
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    color: #9a9a9a;
+    width:100%;
+    padding: 25px 0 5px 0;
+}
+.mainContent .sfFormsEditor input, .sfFormsEditor .sfDropdownList select{
+    border:1px solid #d5d5d5;
+    height: 40px;
+    width:100%;
+    padding:0 0px;
+}
+.mainContent .sfFormsEditor input[type=radio]{
+    width: 10%;
+    height: 25px;
+    vertical-align: middle;
+    padding: 0 0px;
+    outline: none;
+}
+.mainContent .sfFormsEditor input[type='radio'] + label {
+    font-size: 18px;
+    color: #9a9a9a;
+    font-weight: normal !important;
+}
+.mainContent .sfFormsEditor input[type='checkbox']{
+    border:1px solid #d5d5d5;
+    height: 30px;
+    width: 20px;
+    padding:0 15px;
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 35px;
+    outline: none;
+}
+.mainContent span.sfCheckListBox label {
+    margin-top: 5px;
+    height: auto;
+    max-width: 90%;
+}
+.mainContent .sf_cols{
+    width: 100%;
+}
+@media (max-width:992px){
+    .mainContent .sf_cols div.sf_colsOut, .mainContent .sfFormBlock textarea{
+        width: 100% !important;
+    }
+}
+
+/*.mainContent .sfFormsEditor .sf_colsOut input[type='checkbox']{
+    margin: 15px 10px 15px 0;
+    height: auto;
+    width: auto;
+}*/
+.mainContent .sfFormsEditor .sfFormSubmit input{
+    width: 100px;
+    background: #888;
+    border: 1px solid #aeaeae !important;
+    color: #fff !important;
+    height: 40px;
+    float: right;
+    position: relative;
+    margin:40px 0 0 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+.mainContent .sfFormsEditor .sfFormSubmit input:hover{
+    background: #ba1322;
+}
+.mainContent .sfFormsEditor {
+    overflow: hidden;
+    height: auto;
+}
+/* Fees table */
+#fees_table img.dollar{
+    display: none !important;
+}
+
+/* Course Units */
+#div-course-modules{
+    margin:20px 0;
+}
+#div-course-modules table {
+    width: 100% !important;
+    border: 1px solid #f2f2f2;
+    /*margin: 30px 0;*/
+    /*background-color: #f5f5f5;*/
+}
+#div-course-modules table th {
+    background-color: #f5f5f5;
+    padding: 20px 15px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #787878;
+    border-bottom: 0;
+}
+
+/* Locations map and buttons */
+section.map{
+    padding:40px 0 0 0 !important;
+}
+.LocationButtons ul{
+    margin: 5px 0 13px 0; 
+    list-style-type:none !important;
+    padding-left:0;
+    padding-right:0;
+}
+
+.LocationButtons .custMapBtn li a, 
+.LocationButtons .custMapBtn li a:link, 
+.LocationButtons .custMapBtn li a:visited{
+    padding:12px 35px;
+    margin:0 30px 10px 0;
+    background-color:#ba1322 !important;
+    border:1px solid #ab000f !important;
+    font-size:16px;
+}
+.LocationButtons .custMapBtn li a:hover{
+    background-color:#f90218 !important;
+    border:1px solid #ba1322 !important;
+}
+/*a.btnRight{
+    float:right !important;
+    margin-right:0 !important;
+}*/
+@media (max-width:450px){
+    .LocationButtons .custMapBtn li a{
+        width:100%;
+    }
+}
+/* Table style for View Units */
+#UNITS table{
+    border: 1px solid #f5f5f5;
+}
+#UNITS table th{
+    background: #f5f5f5;
+    padding: 20px 15px;
+    font-size: 17px;
+    font-weight: normal;
+    color: #787878;
+    border-bottom: 1px solid #E5E5E5;
+}
+@media (max-width:768px){
+    #UNITS table th{
+        font-size:15px;
+    }
+}
+@media (min-width:768px) and (max-width:992px){
+    #UNITS table th{
+        font-size:16px;
+    }
+}
+
+/* Course search - View All Courses */
+#MainContent_C015, #MainContent_C007, #MainContent_C006, #MainContent_C011 {
+    border: 5px solid #f7f7f7;
+    padding: 45px 25px;
+    position: relative;
+    background-color: #fbfbfb;
+}
+#MainContent_C015 input, #MainContent_C007 input, #MainContent_C006 input, #MainContent_C011 input {
+    padding-left:15px;
+    font-size: 15px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#MainContent_C007 input[type='radio'] {
+    margin-left:35px;
+    float: left;
+    display: block;
+    margin-right: 10px;
+    width: 20px;
+    border:1px solid #f5f5f5;
+    height: 40px;
+    outline: none;
+}
+#MainContent_C007 span.sfRadioList label {
+    width: auto !important;
+    margin-top: 15px;
+    height: 30px;
+}
+#MainContent_C011 input[type='radio'] {
+    margin-left:35px;
+    float: left;
+    display: block;
+    margin-right: 10px;
+    width: 20px;
+    border:1px solid #f5f5f5;
+    height: 40px;
+    outline: none;
+}
+#MainContent_C011 span.sfRadioList label {
+    width: auto !important;
+    margin-top: 15px;
+    height: 30px;
+}
+#MainContent_C015 .sfsearchBox .sfsearchTxt, #MainContent_C007 .sfsearchBox .sfsearchTxt,  #MainContent_C006 .sfsearchBox .sfsearchTxt, #MainContent_C011 .sfsearchBox .sfsearchTxt {
+    border: 2px solid #d5d5d5;
+    height: 50px !important;
+    width: 100% !important;
+    /*padding: 0 40px 0 15px;*/
+    font-size: 22px !important;
+}
+#MainContent_C015 span.sfsearchTxt, #MainContent_C007 span.sfsearchTxt, #MainContent_C006 span.sfsearchTxt, #MainContent_C011 span.sfsearchTxt{
+    border:0 !important;
+}
+#MainContent_C015 .sfsearchBox .sfsearchTxt:focus, #MainContent_C007 .sfsearchBox .sfsearchTxt:focus, #MainContent_C006 .sfsearchBox .sfsearchTxt:focus, #MainContent_C011 .sfsearchBox .sfsearchTxt:focus {
+    background: #fff !important;
+    border-color: #cdcdcd;
+}
+#MainContent_C015 .sfsearchBox .sfsearchTxt:hover, #MainContent_C007 .sfsearchBox .sfsearchTxt:hover, #MainContent_C006 .sfsearchBox .sfsearchTxt:hover, #MainContent_C011 .sfsearchBox .sfsearchTxt:hover {
+    border-color: #f2f2f2;
+}
+
+#MainContent_C015 .sfsearchBox .sfsearchSubmit, #MainContent_C007 .sfsearchBox .sfsearchSubmit, #MainContent_C006 .sfsearchBox .sfsearchSubmit, #MainContent_C011 .sfsearchBox .sfsearchSubmit{
+    cursor: pointer;
+    width: 25px;
+    height:25px;
+    background: #fff !important;
+    padding: 0 !important;
+    color: transparent;
+     /*border: 1px solid #ccc;*/ 
+    position: absolute;
+    top: 58px;
+    right: 35px;
+    background-image: url('/SiteFinity/WebsiteTemplates/TAFESABootstrap/App_Themes/TAFESA/images/base/searchIcon.png') !important;
+    background-repeat: no-repeat;
+    background-position: 8px 9px;
+    background-size: contain !important;
+    opacity: 0.50;
+}
+#MainContent_C015 .sfsearchBox .sfsearchSubmit:hover, #MainContent_C007 .sfsearchBox .sfsearchSubmit:hover, #MainContent_C006 .sfsearchBox .sfsearchSubmit:hover, #MainContent_C011 .sfsearchBox .sfsearchSubmit:hover{
+    opacity: 0.99;
+}
+
+#MainContent_C015 .input-group-lg i{
+    position: absolute;
+    top: 14px;
+    right: 30px;
+    color: #ccc;
+    font-size: 20px;
+}
+@media (max-width:768px){
+    #MainContent_C015 .input-group-lg i, #MainContent_C015 .sfsearchBox .sfsearchSubmit,
+    #MainContent_C007 .input-group-lg i, #MainContent_C007 .sfsearchBox .sfsearchSubmit,
+    #MainContent_C006 .input-group-lg i, #MainContent_C006 .sfsearchBox .sfsearchSubmit,
+    #MainContent_C011 .input-group-lg i, #MainContent_C011 .sfsearchBox .sfsearchSubmit
+    {
+        display: none;
+    }
+    #MainContent_C015 input, #MainContent_C007 input, #MainContent_C006 input, #MainContent_C011 input{
+        padding: 0 0 0 10px;
+    }
+    #MainContent_C015, #MainContent_C007, #MainContent_C006, #MainContent_C011 {
+        padding: 15px 10px ;
+    }
+}
+/* Search results */
+.sfsearchResultStatistics {
+    font-size: 18px !important;
+    padding: 15px 0 40px 0 !important;
+    margin: 0 !important;
+    font-weight: normal !important;
+}
+.sfsearchResultTitle h2{
+    padding: 0px 0 10px 0 !important;
+}
+.mainContent dd h3{
+    padding:10px 0 10px 0 !important;
+    font-size:18px !important;
+}
+dd h3 i{
+    margin-right: 10px;
+}
+.sfsearchResultTitle a, .sfsearchResultTitle a:active, .sfsearchResultTitle a:visited{
+    font-size: 20px;
+    color:#ba1322;
+}
+.sfsearchResultTitle a:hover{
+    font-size: 20px;
+    text-decoration:underline;
+}
+.studyMode{
+    padding:5px 0;
+}
+.sfsearchResultTitle hr{
+   margin:0;
+}
+.sf_pagerNumeric{
+    margin-top: 25px;
+    /* font-size: 9px !important; */
+    border-top: 3px solid #eee;
+    padding: 20px 15px 5px 15px;
+}
+.sf_pagerNumeric a, .sf_pagerNumeric a:visited{
+    color:#ba1322 !important;
+    margin:0 5px;
+}
+.sf_pagerNumeric a:hover{
+    color:#ba1322;
+    border: 1px solid #f90218 !important;
+}
+.sf_pagerNumeric a.sf_PagerCurrent, .sf_pagerNumeric a:visited.sf_PagerCurrent{
+    background-color: #ba1322 !important;
+    border: 1px solid #ab000f !important;
+    color: #fff!important;
+}
+.sf_pagerNumeric a:hover.sf_PagerCurrent {
+    background-color: #f90218 !important;
+    border: 1px solid #ba1322 !important;
+    color: #fff!important;
+}
+
+/* Form error */
+.errorBorder{
+    border:1px solid #ba1322;
+}
+
+/* Intenational tab, how To Apply */
+.brochure-notes .international-application{
+    padding:20px 0 5px 0;
+}
+.brochure-notes a.online-enquiry{
+    font-size: 24px;
+}
+.brochure-notes a.online-application{
+    font-size: 28px;
+}
+.brochure-notes a.online-application{
+    color: #fff !important;
+    padding: 7px 10px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    text-decoration: none;
+    background-color: #5cb85c !important;
+    border-color: #4cae4c !important;
+    white-space: nowrap;
+    font-size: 16px;
+}
+.brochure-notes a.online-application:hover {
+    color: #fff !important;
+    background-color: #449d44 !important;
+    border-color: #398439 !important;
+}
+
+/* Delivery location details new sub table */
+.delveryLocDetails{
+    padding:0 15px 20px 15px;
+    /*border-bottom: 1px solid #f2f2f2;*/
+}
+.delveryLocDetails label, .delveryLocDetails .value{
+    font-size:14px;
+}
+.delveryLocDetails .special label, .delveryLocDetails .special .value{
+    font-size: 17px;
+}
+.delveryLocDetails .contactInfo a, .delveryLocDetails .contactInfo i, .delveryLocDetails .contactInfo .value{
+    font-size:17px;
+    padding-right:10px;
+}
+.delveryLocDetails .contactInfo i{
+    padding-right:15px;
+}
+
+#MainContent_SoftwareWebstoreForm input {
+  width: auto;
+  height: auto;
+  float: left;
+  display: block;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  padding: 6px 12px 6px 12px;
+  text-decoration: none; 
+  margin: 6px 20px 0 0;
+  outline: none;
+  background: #ba1322 !important;
+  border: 1px solid #ab000f !important;
+  color: #fff !important;
+}
+
+#MainContent_SoftwareWebstoreForm input:hover {
+  text-decoration: none;
+  outline: none;
+  background: #f90218 !important;
+  border: 1px solid #ba1322 !important;
+  color: #fff !important;
+}
+.sfError
+{
+  color: #ba1322;
+  display: block;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  text-align: left;
+}
+
+#MainContent_SoftwareWebstoreForm label {
+  display: block;
+  font-weight: unset;
+  padding: 0 0 0 0;
+  outline: none;
+}
+
+#MainContent_SoftwareWebstoreForm .btn {
+  outline: none;
+}

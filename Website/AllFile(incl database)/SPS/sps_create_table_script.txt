@@ -1,0 +1,71 @@
+CREATE TABLE IF NOT EXISTS tblCampus(`campus` VARCHAR(5), `CampusFullName` VARCHAR(100), `CampusCoordinator` VARCHAR(5), `CampusAdminContact` VARCHAR(5), PRIMARY KEY (`campus`));
+
+CREATE TABLE IF NOT EXISTS tblCompetencies(`CompUnitCode` VARCHAR(50), `CompName` VARCHAR(100), `Hours` INT, `SISCode` VARCHAR(10), `CourseSubject` VARCHAR(50), `GradeMode` VARCHAR(5), `FFS_Charge_2016_S1` INT, `FFS_Charge_2015_S1` INT, `FFS_Charge_2014_S2` INT, `FFS_Charge_2014_S1` INT, `FFS_Charge_2015_S2` INT, `VFS_Charge` INT, `FFS_Charge` INT, PRIMARY KEY (`CompUnitCode`));
+
+CREATE TABLE IF NOT EXISTS tblCompletionTypes(`CompletionType` VARCHAR(20), `Desc` VARCHAR(100), PRIMARY KEY (`CompletionType`));
+
+CREATE TABLE IF NOT EXISTS tblComposite_Dual(`Industry Group` VARCHAR(255), `Career Group` VARCHAR(255), `TAFE SA Code` VARCHAR(255), `National Code` VARCHAR(255), `SATAC Code` DOUBLE, `Campus` VARCHAR(255), `AQF Level` VARCHAR(255), `Title` VARCHAR(255), `Study Place` VARCHAR(255), `Study Session` VARCHAR(255), `Study Load` VARCHAR(255), `Min Quota` VARCHAR(255), `Max Quota` VARCHAR(255), `Admission Type` VARCHAR(255), `Making Immediate Offers?` VARCHAR(255), `Offered in Semester 2?` VARCHAR(255), `Educational Manager` VARCHAR(255), `Replacement` VARCHAR(255), PRIMARY KEY (`SATAC Code`));
+
+CREATE TABLE IF NOT EXISTS tblCompUsageTypes(`UsageType` VARCHAR(10), `Description` VARCHAR(100), PRIMARY KEY (`UsageType`));
+
+CREATE TABLE IF NOT EXISTS tblDayOfWeek(`num` INT, `day_of_week` VARCHAR(255), PRIMARY KEY (`num`));
+
+CREATE TABLE IF NOT EXISTS tblEnrolmentTypes(`EnrolmentType` VARCHAR(20), `Desc` VARCHAR(100), `FSI_Code` VARCHAR(10), PRIMARY KEY (`EnrolmentType`));
+
+CREATE TABLE IF NOT EXISTS tblICA_To_ICT_Codes(`CompUnitCodeICA` VARCHAR(15), `CompUnitCodeICT` VARCHAR(15), `SISCodeICA` VARCHAR(10), `SISCodeICT` VARCHAR(10), PRIMARY KEY (`CompUnitCodeICA`));
+
+CREATE TABLE IF NOT EXISTS tblICA_To_ICT_Quals(`ID` INT NOT NULL AUTO_INCREMENT, `QualCodeICA` VARCHAR(15), `QualCodeICT` VARCHAR(15), PRIMARY KEY (`ID`));
+
+CREATE TABLE IF NOT EXISTS tblLegalSemesters(`Semester` VARCHAR(20), `FullName` VARCHAR(20), `T1_StartDate` DATETIME, `T1_EndDate` DATETIME, `T2_StartDate` DATETIME, `T2_EndDate` DATETIME, PRIMARY KEY (`Semester`));
+
+CREATE TABLE IF NOT EXISTS tblLogs(`ID` INT NOT NULL AUTO_INCREMENT, `Log_Date` VARCHAR(255), `Log_Time` VARCHAR(255), `User` VARCHAR(255), `Message` TEXT, `LogType` VARCHAR(255), PRIMARY KEY (`ID`));
+
+CREATE TABLE IF NOT EXISTS tblPresetRegAdviceDetails(`DetailsID` INT NOT NULL AUTO_INCREMENT, `PresetRegAdviceName` VARCHAR(100), `Qual` VARCHAR(100), `Plan` VARCHAR(20), `Campus` VARCHAR(100), `TypeOfEnrolment` VARCHAR(100), `Notes` TEXT, `RegistrationSemester` VARCHAR(20), PRIMARY KEY (`DetailsID`));
+
+CREATE TABLE IF NOT EXISTS tblPresetRegAdviceTimings(`DetailsID` INT, `TAFECompCode` VARCHAR(50), `State` VARCHAR(50), `Subject` VARCHAR(10), `Timing` VARCHAR(10), `CRN` VARCHAR(10), `CRNCampus` VARCHAR(100), PRIMARY KEY (`DetailsID`,`TAFECompCode`));
+
+CREATE TABLE IF NOT EXISTS tblQualCompICA11(`CompUnitCode` VARCHAR(50), `QualCode` VARCHAR(30), `RelationshipType` VARCHAR(10), PRIMARY KEY (`CompUnitCode`,`QualCode`));
+
+CREATE TABLE IF NOT EXISTS tblQualCompTAFESA(`CompUnitCode` VARCHAR(50), `QualCode` VARCHAR(30), `UsageType` VARCHAR(10), PRIMARY KEY (`CompUnitCode`,`QualCode`));
+
+CREATE TABLE IF NOT EXISTS tblQualCompTypesRequired(`ID` INT NOT NULL AUTO_INCREMENT, `QualCode` VARCHAR(15), `UsageType` VARCHAR(10), `CheckType` VARCHAR(2), `NumRequired` INT, PRIMARY KEY (`ID`,`QualCode`,`UsageType`));
+
+CREATE TABLE IF NOT EXISTS tblQuals(`QualCode` VARCHAR(20), `TPCode` VARCHAR(10), `FullName` VARCHAR(100), `StreamCoordinator` VARCHAR(4), `StreamAdminContact` VARCHAR(5), `TP_Rule_Description` VARCHAR(130), `PID_FolderLocation` VARCHAR(255), `PID_HyperlinkLocation` TEXT, PRIMARY KEY (`QualCode`));
+
+CREATE TABLE IF NOT EXISTS tblQualStudyPlan(`StudyPlanName` VARCHAR(50), `Description` VARCHAR(255), `Qual` VARCHAR(20), `Priority` INT, `ExitQual` VARCHAR(255), `Deprecated` BOOLEAN NOT NULL, PRIMARY KEY (`StudyPlanName`));
+
+CREATE TABLE IF NOT EXISTS tblQualStudyPlanSubjects(`StudyPlanName` VARCHAR(50), `Subject` VARCHAR(20), `Timing` VARCHAR(20), PRIMARY KEY (`StudyPlanName`,`Subject`));
+
+CREATE TABLE IF NOT EXISTS tblQualStudyPlanSubjectsCampusSpecific(`Campus` VARCHAR(20), `StudyPlan` VARCHAR(20), `Subject` VARCHAR(10), `Timing` VARCHAR(10), PRIMARY KEY (`Campus`));
+
+CREATE TABLE IF NOT EXISTS tblQualSubjectTAFESA(`Subject` VARCHAR(50), `Qual` VARCHAR(50), `UsageType` VARCHAR(20), PRIMARY KEY (`Subject`,`Qual`));
+
+CREATE TABLE IF NOT EXISTS tblQualTAFECodesICA(`Qual` VARCHAR(255), `LocalQualCode` VARCHAR(255), `NationalQualCode` VARCHAR(255), `Description` VARCHAR(255), `EDU` VARCHAR(255), PRIMARY KEY (`Qual`));
+
+CREATE TABLE IF NOT EXISTS tblSISCRNs_SR004_2016_S2(`Report_Name` VARCHAR(100), `Campus` VARCHAR(20), `Department` VARCHAR(150), `CRN` VARCHAR(255), `Course Code` VARCHAR(255), `Course Title` VARCHAR(255), `Meeting Start Date` VARCHAR(20), `Meeting Finish Date` VARCHAR(20), `MONDAY_IND` VARCHAR(255), `TUESDAY_IND` VARCHAR(255), `WEDNESDAY_IND` VARCHAR(255), `THURSDAY_IND` VARCHAR(255), `FRIDAY_IND` VARCHAR(255), `SATURDAY_IND` VARCHAR(255), `SUNDAY_IND` VARCHAR(255), `Time` VARCHAR(20), `Duration Units` VARCHAR(255), `Duration` VARCHAR(255), `Room` VARCHAR(20), `Lecturer ID` VARCHAR(255), `Lecturer` VARCHAR(255), `Instructional Method` VARCHAR(255), `Display on Internet` VARCHAR(255), `Cross List Identifier` VARCHAR(255), `Registration Max` VARCHAR(255), `Registration Actual` VARCHAR(255), `Freeze Date` VARCHAR(255), `Day_Of_Week` VARCHAR(15), `ImportDate` DATETIME, `RegistrationCounselling` INT);
+
+CREATE TABLE IF NOT EXISTS tblSISGrades_SR024(`Report_Name` VARCHAR(255), `Campus` VARCHAR(255), `CRN` VARCHAR(255), `Department` VARCHAR(255), `Division` VARCHAR(255), `Course Number` VARCHAR(255), `Course Title` VARCHAR(255), `Instructor ID` VARCHAR(255), `Instructor First Name` VARCHAR(255), `Instructor Last Name` VARCHAR(255), `Student ID` VARCHAR(255), `Student First Name` VARCHAR(255), `Student Last Name` VARCHAR(255), `Admit Type` VARCHAR(255), `Grade` VARCHAR(255), `Grade Date` VARCHAR(255), `Class Status` VARCHAR(255), `Nominal Hours` VARCHAR(255), `Registration Status` VARCHAR(255), `DataAdded` DATETIME, `Semester` VARCHAR(20), PRIMARY KEY (`CRN`,`Course Number`,`Student ID`));
+
+CREATE TABLE IF NOT EXISTS tblSiteDetails(`celcat_Site_id` DOUBLE, `campus` VARCHAR(255), PRIMARY KEY (`celcat_Site_id`));
+
+CREATE TABLE IF NOT EXISTS tblStaffDetails(`InstructorID` VARCHAR(50), `unique_name` VARCHAR(255), `Timetable_Coordinator` VARCHAR(10), `Short_Name` VARCHAR(5), `HPI` BOOLEAN NOT NULL, `Home_Campus` VARCHAR(50), `Admin` BOOLEAN NOT NULL, PRIMARY KEY (`Short_Name`));
+
+CREATE TABLE IF NOT EXISTS tblStatusCompleted(`StudentID` VARCHAR(15), `SISCodeFrom` VARCHAR(15), `SISCodeTo` VARCHAR(15), `DateStatusCompletedRecordCreate` DATETIME, `StatusFormCompleted` BOOLEAN NOT NULL, `DateStatusFormCompleted` DATETIME, `NeedsOfficialStatus` BOOLEAN NOT NULL, PRIMARY KEY (`StudentID`,`SISCodeFrom`,`SISCodeTo`));
+
+CREATE TABLE IF NOT EXISTS tblStudent_Email_and_Single_Sign_On(`?StudentID` VARCHAR(255), `LastName` VARCHAR(255), `FirstName` VARCHAR(255), `QualificationTAFECode` VARCHAR(255), `QualificationTitle` VARCHAR(255), `CampusCode` VARCHAR(255), `CampusDescription` VARCHAR(255), `UoC` VARCHAR(255), `TafeEmail` VARCHAR(255), `OtherEmail` VARCHAR(255));
+
+CREATE TABLE IF NOT EXISTS tblStudentStudyPlanDetails(`DetailsID` INT NOT NULL AUTO_INCREMENT, `Qual` VARCHAR(100), `Plan` VARCHAR(20), `StartSemester` VARCHAR(50), `StudentID` VARCHAR(20), `LastName` VARCHAR(100), `FirstName` VARCHAR(100), `Email` VARCHAR(100), `Campus` VARCHAR(100), `LastCounsellor` VARCHAR(100), `LastCounsellingDate` VARCHAR(50), `LastRegAdviseSemester` VARCHAR(100), `TypeOfEnrolment` VARCHAR(100), `Notes` TEXT, `QualCode` VARCHAR(20), `Active` BOOLEAN NOT NULL, PRIMARY KEY (`DetailsID`));
+
+CREATE TABLE IF NOT EXISTS tblStudentStudyPlanTimings(`DetailsID` INT, `TAFECompCode` VARCHAR(50), `State` VARCHAR(50), `Subject` VARCHAR(10), `Timing` VARCHAR(30), `CRN` VARCHAR(10), `CRNCampus` VARCHAR(100));
+
+CREATE TABLE IF NOT EXISTS tblSubjectCompetencies(`ITSubject` VARCHAR(255), `ContactHrsRatioToSubject` DOUBLE, `CourseNumberICA11` VARCHAR(10), `BridgingUnit` BOOLEAN NOT NULL, `CourseNumber` VARCHAR(10), PRIMARY KEY (`ITSubject`,`CourseNumber`));
+
+CREATE TABLE IF NOT EXISTS tblSubjectDetails(`ITSubject` VARCHAR(255), `Coordinator_2016S1` VARCHAR(10), `Coordinator_2016S2` VARCHAR(10), `Capacity` DOUBLE, `CrossLinkCount` DOUBLE, `Department` VARCHAR(255), `Division` VARCHAR(255), `Duration` DOUBLE, `SubjectName` VARCHAR(100), `Moodle2_Quality_Check_Done` BOOLEAN NOT NULL, `Moodle2_Quality_Check_Passed` BOOLEAN NOT NULL, `InstructionalMethod` VARCHAR(255), `MeetingType` VARCHAR(255), `ScheduleType` VARCHAR(255), `Coordinator_2014S2` VARCHAR(10), `Coordinator_2014S1` VARCHAR(255), `Coordinator_2013S2` VARCHAR(10), `Qualified_Instructor_Required` BOOLEAN NOT NULL, `Certified_Instructor_Required` BOOLEAN NOT NULL, `FFS_Delivery_Hours` INT, `FFS_Class_Size` INT, `FFS_Charge` INT, `RateCode` VARCHAR(15), `DetailCode` VARCHAR(10), `Taxonomy` VARCHAR(15), `Coordinator_2015S2` VARCHAR(255), `Moodle_Course_ID` INT, PRIMARY KEY (`ITSubject`));
+
+CREATE TABLE IF NOT EXISTS tblSubjectDetailsCampusSpecific(`Campus` VARCHAR(20), `StudyPlan` VARCHAR(4), `ITSubject` VARCHAR(255), `Capacity` DOUBLE, `CrossLinkCount` DOUBLE, `Duration` DOUBLE, `InstructionalMethod` VARCHAR(5), `MeetingType` VARCHAR(5), `ScheduleType` VARCHAR(5), PRIMARY KEY (`Campus`,`StudyPlan`,`ITSubject`));
+
+CREATE TABLE IF NOT EXISTS tblSubjectUsageTypes(`ID` INT NOT NULL AUTO_INCREMENT, `Usagetype` VARCHAR(20), PRIMARY KEY (`ID`));
+
+CREATE TABLE IF NOT EXISTS tblTimings(`Timing` VARCHAR(20), `Desc` VARCHAR(255), PRIMARY KEY (`Timing`));
+
+CREATE TABLE IF NOT EXISTS tbQuallLink(`Qual` VARCHAR(20), `LocalQualCode` VARCHAR(20), `TempSATACCode` VARCHAR(20), PRIMARY KEY (`Qual`)); 
